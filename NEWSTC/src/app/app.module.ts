@@ -7,7 +7,8 @@ import { TopheadlineComponent } from './topheadline/topheadline.component';
 import {HttpClientModule} from '@angular/common/http';
 import {TcnewsapiService} from './service/tcnewsapi.service';
 import { TechComponent } from './tech/tech.component';
-import { BusinessComponent } from './business/business.component'
+import { BusinessComponent } from './business/business.component';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,9 @@ import { BusinessComponent } from './business/business.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    LoadingBarHttpClientModule
+    
   ],
   providers: [TcnewsapiService],
   bootstrap: [AppComponent]
